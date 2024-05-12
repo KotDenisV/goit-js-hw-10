@@ -14,8 +14,6 @@ let userSelectedDate;
 let timerInterval;
 let toDay = new Date();
 button.disabled = true;
-inputDate.classList.add('input-css');
-
 
 const options = {
   enableTime: true,
@@ -23,7 +21,7 @@ const options = {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    inputDate.classList.remove('input-active');
+    inputDate.style.borderColor = '';
     if (selectedDates[0] < toDay) {
       iziToast.show({
         title: 'Error',
@@ -40,7 +38,7 @@ const options = {
     }
   },
   onOpen() {
-    inputDate.classList.add('input-activ');
+    inputDate.style.borderColor = '#4e75ff';
   },
 };
 
