@@ -22,6 +22,10 @@
   -webkit-text-size-adjust: 100%;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   padding-left: 156px;
 }
@@ -29,7 +33,7 @@ body {
 .input-css {
   margin-top: 36px;
   border-radius: 4px;
-  border: 1px solid #808080;
+  border-color: #808080;
   width: 272px;
   padding: 8px 16px;
   font-family: Montserrat;
@@ -39,20 +43,20 @@ body {
   letter-spacing: 0.04em;
 }
 
-.input-css:hover {
-  border-color: #000;
-}
-
 .input-activ {
   border-color: #4e75ff;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-css:hover {
+  border-color: #000;
 }
 
 button {
   border-radius: 8px;
   background: #cfcfcf;
   padding: 8px 16px;
-  color: #989898;
+  border-color: #808080;
   width: 75px;
   height: 40px;
   font-family: Montserrat;
