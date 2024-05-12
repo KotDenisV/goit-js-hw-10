@@ -14,6 +14,7 @@ let userSelectedDate;
 let timerInterval;
 let toDay = new Date();
 button.disabled = true;
+inputDate.classList.add('input-css');
 
 
 const options = {
@@ -21,7 +22,8 @@ const options = {
   time_24hr: true,
   defaultDate: new Date(),
   minuteIncrement: 1,
-  onClose(selectedDates) {    
+  onClose(selectedDates) {
+    inputDate.classList.remove('input-active');
     if (selectedDates[0] < toDay) {
       iziToast.show({
         title: 'Error',
@@ -30,10 +32,15 @@ const options = {
         position: 'topCenter'
       });
       button.disabled = true;
+      button.classList.remove('btn-active');
     } else {
       userSelectedDate = selectedDates[0];
-      button.disabled = false;      
+      button.disabled = false;
+      button.classList.add('btn-active');
     }
+  },
+  onOpen() {
+    inputDate.classList.add('input-activ');
   },
 };
 
@@ -42,6 +49,7 @@ button.addEventListener('click', handleStart);
 function handleStart(event) {
   if (!button.disabled) {
     button.disabled = true;
+    button.classList.remove('btn-active');
     inputDate.disabled = true;
     timerInterval = setInterval(updateTimer, 1000);
   }
