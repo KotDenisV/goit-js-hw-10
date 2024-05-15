@@ -27,15 +27,15 @@ function handleSubmit(event) {
     .then(delay => {
       iziToast.show({
           title: `✅ Fulfilled promise in ${delay}ms`,
-          titleColor: 'white',  
-          backgroundColor: 'green',
+          titleColor: '#fff',          
+          backgroundColor: '#59A10D',
           position: 'topRight'
         });
     })
     .catch(delay => {
       iziToast.show({
           title: `❌ Rejected promise in ${delay}ms`,
-          titleColor: 'white',
+          titleColor: '#fff',          
           backgroundColor: 'red',
           position: 'topRight'
         });

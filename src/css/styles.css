@@ -9,7 +9,7 @@
 :root {
   font-family: Montserrat, sans-serif;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   font-weight: 400;
 
   color: #2e2f42;
@@ -30,6 +30,14 @@ body {
   padding-left: 156px;
 }
 
+input,
+button {
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  font-size: inherit;
+}
+
 #datetime-picker {
   margin-top: 36px;
   border-radius: 4px;
@@ -37,10 +45,6 @@ body {
   outline: transparent;
   width: 272px;
   padding: 8px 16px;
-  font-family: Montserrat;
-  font-size: 16px;
-  line-height: 150%;
-  font-weight: 400;
   letter-spacing: 0.04em;
 }
 
@@ -55,10 +59,7 @@ button {
   border: none;
   width: 75px;
   height: 40px;
-  font-family: Montserrat;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
   letter-spacing: 0.04em;
   color: #989898;
 }
@@ -86,33 +87,80 @@ button {
 }
 
 .value {
-  font-family: Montserrat;
-  font-weight: 400;
+  font-family: inherit;
+  font-weight: inherit;
   font-size: 40px;
-  line-height: 120%;
+  line-height: 1.2;
   letter-spacing: 0.04em;
   color: #2e2f42;
 }
 
 .label {
-  font-family: Montserrat;
+  font-family: inherit;
   text-transform: uppercase;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: 1.5;
   color: #2e2f42;
 }
 
-button[type='submit'] {
-  font-family: Montserrat;
+/* snackbar */
+
+.btn-submit {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
   letter-spacing: 0.04em;
   border-radius: 8px;
   padding: 8px 16px;
   width: 360px;
   background-color: #4e75ff;
   color: #fff;
-  margin-top: 24px;
+  margin-top: 8px;
+}
+
+.btn-submit:hover {
+  background-color: #6c8cff;
+}
+
+.form {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+fieldset {
+  width: 360px;
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  outline: transparent;
+  border: 1px solid #808080;
+}
+
+fieldset:hover,
+input[type='radio']:hover,
+input[type='number']:hover {
+  border-color: #000;
+}
+
+input[type='radio'] {
+  width: 19px;
+  height: 19px;
+}
+
+label {
+  letter-spacing: 0.04em;
+}
+
+input[type='number'] {
+  width: 360px;
+  display: block;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  padding: 8px 16px;
+  border-radius: 4px;
+  outline: transparent;
+  border: 1px solid #808080;
 }
